@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FileDown } from 'lucide-react';
 
 // Harvard-style international résumé content for Steven Williams
 const Resume = () => {
@@ -11,9 +12,17 @@ const Resume = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-8 text-3xl font-semibold"
+          className="mb-8 flex items-center gap-3 text-3xl font-semibold"
         >
-          Résumé (Harvard format)
+          <span>Résumé (Harvard format)</span>
+          <a
+            href="/steven-williams-resume.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/90 transition hover:border-white/20 hover:bg-white/10"
+          >
+            <FileDown size={16} />
+            <span>Download PDF</span>
+          </a>
         </motion.h2>
 
         {/* Header */}

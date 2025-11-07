@@ -5,6 +5,7 @@ const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#projects', label: 'Projects' },
   { href: '#resume', label: 'Résumé' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 const Navbar = () => {
@@ -28,6 +29,9 @@ const Navbar = () => {
             </a>
           ))}
           <div className="ml-2 flex items-center gap-3">
+            <a href="/steven-williams-resume.pdf" download className="text-xs font-medium text-white/80 hover:text-white">
+              Download PDF
+            </a>
             <a href="mailto:hello@stevenwilliams.dev" aria-label="Email" className="text-white/70 hover:text-white">
               <Mail size={18} />
             </a>
@@ -40,7 +44,7 @@ const Navbar = () => {
           </div>
         </nav>
 
-        <button onClick={() => setOpen((o) => !o)} className="md:hidden text-white">
+        <button onClick={() => setOpen((o) => !o)} className="md:hidden text-white" aria-label="Toggle menu">
           {open ? <X /> : <Menu />}
         </button>
       </div>
@@ -54,6 +58,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex items-center gap-4 pt-2">
+              <a href="/steven-williams-resume.pdf" download className="text-white/80 hover:text-white">Download PDF</a>
               <a href="mailto:hello@stevenwilliams.dev" className="text-white/70 hover:text-white">Email</a>
               <a href="https://github.com" target="_blank" rel="noreferrer" className="text-white/70 hover:text-white">GitHub</a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-white/70 hover:text-white">LinkedIn</a>
